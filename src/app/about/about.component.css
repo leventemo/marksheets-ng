@@ -1,0 +1,13 @@
+.container {
+  margin: 5%;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+ul.no-bullets {
+  list-style-type:disc;
+  padding-left: 1rem;
+  margin: 1rem;
+}

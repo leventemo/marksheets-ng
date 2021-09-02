@@ -1,0 +1,62 @@
+<div class="page-wrapper">
+
+  <div class="toast hidden">
+    <div class="notification">
+      Please fill in all the inputs of the form.
+    </div>
+  </div>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col"></div>
+      <div class="col-lg-6 col-md-8 col-sm-10">
+        <form name="test-info">
+          <div class="form-group">
+            <label for="studentName" class="label">Student</label>
+            <input type="text" id="student-name" name="studentName" class="form-control" placeholder="Student's Name">
+          </div>
+
+          <div class="form-group">
+            <label for="group" class="label">Group</label>
+            <input type="text" id="group" name="group" class="form-control" placeholder="Group">
+          </div>
+
+          <div class="form-group">
+            <label for="date" class="label">Date</label>
+            <input type="date" id="date" name="date" class="form-control" placeholder="Date">
+          </div>
+
+          <div class="form-group">
+            <label for="testType" class="label">Test</label>
+            <select id="test-type" class="form-control custom-select" name="testType">
+              <option disabled selected>Please select</option>
+              <option disabled></option>
+              <option value="b1Reading">B1 Preliminary – Reading</option>
+              <option value="b1Listening">B1 Preliminary – Listening</option>
+              <option disabled></option>
+              <option value="b2ReadingAndUse">B2 First – Reading & Use of English</option>
+              <option value="b2Listening">B2 First – Listening</option>
+              <option disabled></option>
+              <option value="c1ReadingAndUse">C1 Advanced – Reading & Use of English</option>
+              <option value="c1Listening">C1 Advanced – Listening</option>
+              <option disabled></option>
+              <option value="c2ReadingAndUse">C2 Proficiency – Reading & Use of English</option>
+              <option value="c2Listening">C2 Proficiency – Listening</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <input class="btn btn-outline-secondary" type="submit" value="Submit">
+          </div>
+
+        </form>
+
+
+        <div class="marksheet-header hidden sticky"></div>
+        <div class="marksheet-body hidden"></div>
+      </div>
+      <div class="col"></div>
+    </div>
+  </div>
+</div>
