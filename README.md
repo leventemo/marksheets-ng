@@ -37,17 +37,19 @@ this is work in progress
 
 ## TODO
 
+HTML-CSS
 - [x] create navbar & footer components
 - [x] logo in navbar
 - [x] about page content
 - [x] form styling
+- [x] finish footer socials (colour, links, year via `new Date`)
+- [x] favicon
 - [ ] set up navbar toggle
-- finish footer socials (colour, links, year via `new Date`)
-- [ ] favicon (read-only?)
 - [ ] separate home (hero img svg?) & form components
 - [ ] typography
-- [ ] app, home, about: order of components
 
+ANGULAR
+- [x] set up `languageTestModel`
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1.
 
