@@ -44,7 +44,8 @@ HTML-CSS
 - [x] form styling
 - [x] favicon
 - [x] display current in year in footer
-- [ ] finish footer socials (colour, links)
+- [x] footer styling
+- [ ] delete svg icons for socials
 - [ ] set up navbar toggle
 - [ ] separate home (hero img svg?) & form components
 - [ ] typography

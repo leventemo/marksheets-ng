@@ -1,9 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&family=Baskervville&family=DM+Mono&display=swap');
+
 footer {
-  color: #9AA0A5;
+  font-family: 'DM Mono', monospace;
+  color: #454746;
   background-color: #f5f5f5;
   padding: 20px;
 }
 
 a {
-  color: #9AA0A5;
+  color: #3B708D;
+  letter-spacing: 0.3em;
+}
+
+#twitter-anchor {
+  color: #1D9BF0;
+}
+
+#github-anchor {
+  color: #1F2327;
+}
+
+#linkedin-anchor {
+  color: #0A66C2;
 }

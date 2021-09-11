@@ -1,7 +1,11 @@
-<footer class="footer fixed-bottom">
-  <div>
-    <p><strong>Marksheets</strong> by <a href="https://twitter.com/leventemo">@leventemo</a></p>
-    <p>&copy; {{currentDate | date: 'yyyy'}}</p><img src="assets/twitter.svg" alt="link to twitter profile">
-    <img src="assets/github.svg" alt="link to github profile">
+<footer class="footer fixed-bottom row">
+  <div class="col-md">
+    <div>by <a href="https://twitter.com/leventemo">@leventemo </a>&copy; {{currentDate | date: 'yyyy'}}
+    </div>
+  </div>
+  <div class="col text-right">
+    <a href="https://twitter.com/leventemo" id="twitter-anchor">Twitter</a>
+    <a href="https://github.com/leventemo" id="github-anchor">Github</a>
+    <a href="https://www.linkedin.com/in/leventemo/" id="linkedin-anchor">LinkedIn</a>
   </div>
 </footer>
