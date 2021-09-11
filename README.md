@@ -42,14 +42,18 @@ HTML-CSS
 - [x] logo in navbar
 - [x] about page content
 - [x] form styling
-- [x] finish footer socials (colour, links, year via `new Date`)
 - [x] favicon
+- [x] display current in year in footer
+- [ ] finish footer socials (colour, links)
 - [ ] set up navbar toggle
 - [ ] separate home (hero img svg?) & form components
 - [ ] typography
 
 ANGULAR
 - [x] set up `languageTestModel`
+- [ ] feed options from `languageTestModel` into dropdown
+
+# ANGULAR-GENERATED INFO
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1.
 
