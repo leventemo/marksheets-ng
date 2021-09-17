@@ -47,7 +47,9 @@ HTML-CSS
 - [x] footer styling
 - [ ] delete svg icons for socials
 - [x] set up navbar toggle
-- [ ] separate home (hero img svg?) & form components
+- [x] display languageTestModelList in home component
+- [ ] feed languageTestModelList into "Test" dropdown
+- [ ] separate home (hero img svg?) & form components?
 - [ ] typography
 
 REACTIVE FORM:

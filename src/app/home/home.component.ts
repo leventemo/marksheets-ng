@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Utils } from '../_helpers/utils';
-import { languageTestModel } from '../_helpers/templates';
+import { LanguageTestModelList } from '../_helpers/templates';
 
 @Component({
   selector: 'app-home',
@@ -9,10 +9,12 @@ import { languageTestModel } from '../_helpers/templates';
 })
 export class HomeComponent implements OnInit {
 
+  languageTestModelList = LanguageTestModelList;
+
   constructor() { }
 
   ngOnInit(): void {
-    console.log(languageTestModel);
+    console.log(LanguageTestModelList);
   }
 
 }
