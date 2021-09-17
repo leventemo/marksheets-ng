@@ -46,9 +46,12 @@ HTML-CSS
 - [x] display current in year in footer
 - [x] footer styling
 - [ ] delete svg icons for socials
-- [ ] set up navbar toggle
+- [x] set up navbar toggle
 - [ ] separate home (hero img svg?) & form components
 - [ ] typography
+
+REACTIVE FORM:
+https://angular.io/guide/reactive-forms
 
 ANGULAR
 - [x] set up `languageTestModel`
