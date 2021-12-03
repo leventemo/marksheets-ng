@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Utils } from '../_helpers/utils';
-import { LanguageTestModelList } from '../_helpers/templates';
 import { FirstFormComponent } from '../first-form/first-form.component';
 
 @Component({
@@ -10,12 +9,11 @@ import { FirstFormComponent } from '../first-form/first-form.component';
 })
 export class HomeComponent implements OnInit {
 
-  languageTestModelList = LanguageTestModelList;
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log(LanguageTestModelList);
+
   }
 
 }

@@ -19,7 +19,7 @@
         <label for="test">Test</label>
         <select class="form-control" id="test" required [(ngModel)]="model.test" name="test" #test="ngModel">
           <option [value]="null" disabled>Choose</option>
-          <option *ngFor="let item of languageTestModelList" [value]="model.test">{{item}}</option>
+          <option *ngFor="let item of languageTestModelList" [value]="item">{{item}}</option>
         </select>
         <div [hidden]="test.valid || test.pristine" class="alert alert-danger">
           Test is required
@@ -61,4 +61,3 @@
     <button class="btn btn-primary" (click)="submitted=false">Edit</button>
   </div>
 </div>
-

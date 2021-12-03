@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../_helpers/hero';
-import { LanguageTestModelList } from '../_helpers/templates';
+import { LanguageTestModel } from '../_helpers/templates';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -9,7 +9,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./first-form.component.css']
 })
 export class FirstFormComponent {
-  languageTestModelList = LanguageTestModelList.map(x => x.testName);;
+  languageTestModelList = Object.keys(LanguageTestModel);
 
   model = new Hero(0, '', 'hello', new Date(), null);
 
@@ -33,10 +33,10 @@ export class FirstFormComponent {
   //   Name via form.controls = {{showFormControls(heroForm)}}
   showFormControls(form: any) {
     return form && form.controls.name &&
-    form.controls.name.value; // Dr. IQ
+      form.controls.name.value; // Dr. IQ
   }
 
   /////////////////////////////
 
-  
+
 }
