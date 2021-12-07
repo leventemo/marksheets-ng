@@ -17,7 +17,6 @@ export class FirstFormComponent {
 
   onSubmit() { this.submitted = true; }
 
-
   newHero() {
     this.model = new Hero(0, '', '', new Date(), null);
   }
