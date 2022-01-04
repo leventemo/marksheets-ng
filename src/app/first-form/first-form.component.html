@@ -16,10 +16,15 @@
       </div>
 
       <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" class="form-control" id="date" [(ngModel)]="model.date" name="date">
+      </div>
+
+      <div class="form-group">
         <label for="test">Test</label>
         <select class="form-control" id="test" required [(ngModel)]="model.test" name="test" #test="ngModel">
           <option [value]="null" disabled>Choose</option>
-          <option *ngFor="let item of languageTestModelList" [value]="model.test">{{item}}</option>
+          <option *ngFor="let item of languageTestModelList" [value]="item">{{item}}</option>
         </select>
         <div [hidden]="test.valid || test.pristine" class="alert alert-danger">
           Test is required
@@ -27,38 +32,29 @@
       </div>
 
       <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
-      <button type="button" class="btn btn-default" (click)="newHero(); heroForm.reset()">New Hero</button>
-      <i>with</i> reset
 
-      &nbsp;&nbsp;
-      <button type="button" class="btn btn-default" (click)="newHero()">New Hero</button>
-      <i>without</i> reset
-
-      <!-- NOT SHOWN IN DOCS -->
-      <div>
-        <hr>
-        Name via form.controls = {{showFormControls(heroForm)}}
-      </div>
-      <!-- - -->
     </form>
   </div>
 
   <div [hidden]="!submitted">
     <h2>You submitted the following:</h2>
     <div class="row">
-      <div class="col-xs-3">Name: </div>
+      <div class="col-xs-3 font-weight-bold mr-1">Name:</div>
       <div class="col-xs-9">{{ heroForm.value.name }}</div>
     </div>
     <div class="row">
-      <div class="col-xs-3">Groupom jejrlkesj:</div>
+      <div class="col-xs-3 font-weight-bold mr-1">Group: </div>
       <div class="col-xs-9">{{ heroForm.value.group }}</div>
     </div>
     <div class="row">
-      <div class="col-xs-3">Test: </div>
-      <div class="col-xs-9">{{ heroForm.value.test }}</div>
+      <div class="col-xs-3 font-weight-bold mr-1">Test: </div>
+      <div class="col-xs-9"> {{ heroForm.value.test }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3 font-weight-bold mr-1">Date: </div>
+      <div class="col-xs-9">{{ heroForm.value.date }}</div>
     </div>
     <br>
     <button class="btn btn-primary" (click)="submitted=false">Edit</button>
   </div>
 </div>
-
