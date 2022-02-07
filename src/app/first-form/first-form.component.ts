@@ -9,7 +9,8 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./first-form.component.css']
 })
 export class FirstFormComponent {
-  languageTestModelList = Object.keys(LanguageTestModel);
+  objectKeys = Object.keys;
+  languageTestModel = LanguageTestModel;
 
   model = new Hero(0, '', 'hello', new Date(), null);
 

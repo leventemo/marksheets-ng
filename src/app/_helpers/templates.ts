@@ -14,6 +14,12 @@ class TestStructureItem {
   }
 }
 
+interface TestPaper {
+  testName: string;
+  totalScore: null | number;
+  testStructure: TestStructureItem[];
+}
+
 // PET
 const b1Reading = {
   testName: 'B1 Preliminary – Reading',
@@ -118,6 +124,6 @@ const c2Listening = {
   ]
 }
 
-export const LanguageTestModel = { b1Reading: b1Reading, b1Listening: b1Listening, b2ReadingAndUse: b2ReadingAndUse, b2Listening: b2Listening, c1ReadingAndUse: c1ReadingAndUse, c1Listening: c1Listening, c2ReadingAndUse: c2ReadingAndUse, c2Listening: c2Listening };
+export const LanguageTestModel: { [name: string]: TestPaper } = { b1Reading: b1Reading, b1Listening: b1Listening, b2ReadingAndUse: b2ReadingAndUse, b2Listening: b2Listening, c1ReadingAndUse: c1ReadingAndUse, c1Listening: c1Listening, c2ReadingAndUse: c2ReadingAndUse, c2Listening: c2Listening };
 
 /* export const LanguageTestModelList = [b1Reading, b1Listening, b2ReadingAndUse, b2Listening, c1ReadingAndUse, c1Listening, c2ReadingAndUse, c2Listening]; */

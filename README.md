@@ -35,6 +35,9 @@ this is work in progress
 * user saves results
 * user exports marksheets as pdf
 
+NOTE:
+ran `npm install --save --legacy-peer-deps` a la <https://stackoverflow.com/questions/66989383/could-not-resolve-dependency-npm-err-peer-angular-compiler11-2-8/66990138#66990138> answer 56
+
 ## TODO
 
 HTML-CSS
