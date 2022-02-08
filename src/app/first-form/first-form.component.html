@@ -1,10 +1,11 @@
 <div class="container">
   <div [hidden]="submitted">
-    <h1>Hero Form</h1>
+    <h1>Test Data</h1>
     <form (ngSubmit)="onSubmit()" #heroForm="ngForm" appIdentityRevealed>
       <div class="form-group">
         <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name" #name="ngModel">
+        <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name" #name="ngModel"
+          placeholder="Student Name">
         <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
           Name is required
         </div>
@@ -12,7 +13,8 @@
 
       <div class="form-group">
         <label for="group">Group</label>
-        <input type="text" class="form-control" id="group" [(ngModel)]="model.group" name="group">
+        <input type="text" class="form-control" id="group" [(ngModel)]="model.group" name="group"
+          placeholder="Group or Class">
       </div>
 
       <div class="form-group">
@@ -23,7 +25,7 @@
       <div class="form-group">
         <label for="test">Test</label>
         <select class="form-control" id="test" required [(ngModel)]="model.test" name="test" #test="ngModel">
-          <option [value]="null" disabled>Choose</option>
+          <option [value]="null" disabled>Select</option>
           <option *ngFor="let item of languageTestModel | keyvalue" [value]="item.key">{{item.value.testName}}
           </option>
         </select>

@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/marksheets-ng'),
+      dir: require('path').join(__dirname, './coverage/marksheet-new'),
       subdir: '.',
       reporters: [
         { type: 'html' },

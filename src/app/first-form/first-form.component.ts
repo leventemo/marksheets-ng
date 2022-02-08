@@ -12,7 +12,7 @@ export class FirstFormComponent {
   objectKeys = Object.keys;
   languageTestModel = LanguageTestModel;
 
-  model = new Hero(0, '', 'hello', new Date(), null);
+  model = new Hero(0, '', '', new Date(), null);
 
   submitted = false;
 

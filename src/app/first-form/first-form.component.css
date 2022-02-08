@@ -1,0 +1,14 @@
+.btn-success {
+  background-color: #C364fa;
+  border-color: blueviolet;
+}
+
+.btn-success:hover {
+  background-color: #6B08C0;
+  border-color: #4E068C;
+}
+
+.btn-success:disabled {
+  background-color: #A968E2;
+  border-color: #4E068C;
+}
