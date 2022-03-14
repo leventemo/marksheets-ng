@@ -28,6 +28,10 @@ export class FirstFormComponent {
     /* this.currentTestStructure.testStructure; */
   }
 
+  onButtonClick() {
+    this.model = new Hero(0, 'John Doe', 'My Group Name', new Date(), 'B1 Preliminary – Listening');
+    return this.model;
+  }
 
   /*   newHero() {
       this.model = new Hero(0, '', '', new Date(), null);
