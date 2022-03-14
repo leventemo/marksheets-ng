@@ -14,7 +14,7 @@ class TestStructureItem {
   }
 }
 
-interface TestPaper {
+export interface TestPaper {
   testName: string;
   totalScore: null | number;
   testStructure: TestStructureItem[];

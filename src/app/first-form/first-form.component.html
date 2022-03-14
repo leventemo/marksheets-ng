@@ -1,6 +1,6 @@
 <div class="container">
   <div [hidden]="submitted">
-    <h1>Test Data</h1>
+    <h1>Session Info</h1>
     <form (ngSubmit)="onSubmit()" #heroForm="ngForm" appIdentityRevealed>
       <div class="form-group">
         <label for="name">Name</label>
@@ -41,23 +41,29 @@
 
   <div [hidden]="!submitted">
     <h2>You submitted the following:</h2>
-    <div class="row">
-      <div class="col-xs-3 font-weight-bold mr-1">Name:</div>
-      <div class="col-xs-9">{{ heroForm.value.name }}</div>
-    </div>
-    <div class="row">
-      <div class="col-xs-3 font-weight-bold mr-1">Group: </div>
-      <div class="col-xs-9">{{ heroForm.value.group }}</div>
-    </div>
-    <div class="row">
-      <div class="col-xs-3 font-weight-bold mr-1">Test: </div>
-      <div class="col-xs-9"> {{ heroForm.value.test }}</div>
-    </div>
-    <div class="row">
-      <div class="col-xs-3 font-weight-bold mr-1">Date: </div>
-      <div class="col-xs-9">{{ heroForm.value.date }}</div>
-    </div>
-    <br>
+    <table>
+      <tbody>
+        <tr>
+          <th scope="row" class="label">Name:</th>
+          <td>{{ heroForm.value.name }}</td>
+        </tr>
+        <tr>
+          <th scope="row" class="label">Group: </th>
+          <td>{{ heroForm.value.group }}</td>
+        </tr>
+        <tr>
+          <th scope="row" class="label">Test: </th>
+          <td> {{ heroForm.value.test }}</td>
+        </tr>
+        <tr>
+          <th scope="row" class="label">Date: </th>
+          <td>{{ heroForm.value.date }}</td>
+        </tr>
+      </tbody>
+    </table>
     <button class="btn btn-primary" (click)="submitted=false">Edit</button>
   </div>
+
+  <div *ngFor="let item of currentTestStructure.testStructure">{{makeString(item)}}</div>
+
 </div>

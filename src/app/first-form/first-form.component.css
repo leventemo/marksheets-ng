@@ -3,6 +3,10 @@
   border-color: blueviolet;
 }
 
+button {
+  margin: 1rem 0 1rem 0;
+}
+
 .btn-success:hover {
   background-color: #6B08C0;
   border-color: #4E068C;
@@ -12,3 +16,4 @@
   background-color: #A968E2;
   border-color: #4E068C;
 }
+
