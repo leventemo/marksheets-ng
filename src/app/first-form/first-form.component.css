@@ -7,6 +7,12 @@ button {
   margin: 1rem 0 1rem 0;
 }
 
+.btn {
+  background-color: #7D1AD4;
+  border-color: #7D1AD4;
+  width: 6rem;
+}
+
 .btn-success:hover {
   background-color: #6B08C0;
   border-color: #4E068C;
@@ -14,6 +20,6 @@ button {
 
 .btn-success:disabled {
   background-color: #A968E2;
-  border-color: #4E068C;
+  border-color: #A968E2;
 }
 
