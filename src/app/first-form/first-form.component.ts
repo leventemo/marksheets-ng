@@ -3,6 +3,7 @@ import { Hero } from '../_helpers/hero';
 import { LanguageTestModel, TestPaper } from '../_helpers/templates';
 import { FormControl } from '@angular/forms';
 import { TestComponentRenderer } from '@angular/core/testing';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'first-form',
@@ -25,13 +26,18 @@ export class FirstFormComponent {
 
     this.currentTestStructure = this.languageTestModel[this.model.test || ''];
 
-    /* this.currentTestStructure.testStructure; */
+    const jsonData = JSON.stringify(this.model);
+    localStorage.setItem('testData', jsonData);
+
+    this.router.navigate(['/test']);
+
   }
 
-  onButtonClick() {
-    this.model = new Hero(0, 'John Doe', 'My Group Name', new Date(), 'B1 Preliminary – Listening');
-    return this.model;
+  onAutofillBtnClick() {
+    this.model = new Hero(0, 'John Doe', 'My Group Name', new Date(), 'b1Reading');
   }
+
+  constructor(private router: Router) { }
 
   /*   newHero() {
       this.model = new Hero(0, '', '', new Date(), null);
@@ -46,10 +52,10 @@ export class FirstFormComponent {
 
   // Reveal in html:
   //   Name via form.controls = {{showFormControls(heroForm)}}
-  showFormControls(form: any) {
-    return form && form.controls.name &&
-      form.controls.name.value; // Dr. IQ
-  }
+  /*   showFormControls(form: any) {
+      return form && form.controls.name &&
+        form.controls.name.value; // Dr. IQ
+    } */
 
   /////////////////////////////
 

@@ -36,7 +36,8 @@
 
       <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
       <div>
-        <button class="btn btn-success" (click)="onButtonClick()" [disabled]="heroForm.form.valid">Autofill</button>
+        <button class="btn btn-success" (click)="onAutofillBtnClick()" [disabled]="heroForm.form.valid">Submit Dummy
+          Data</button>
       </div>
     </form>
   </div>
@@ -45,6 +46,7 @@
     <h2>You submitted the following:</h2>
     <table>
       <tbody>
+        <!--legenerálni ngFor; [name group, test, date]-->
         <tr>
           <th scope="row" class="label">Name:</th>
           <td>{{ heroForm.value.name }}</td>

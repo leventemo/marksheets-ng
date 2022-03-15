@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FirstFormComponent } from './first-form/first-form.component';
 import { FormsModule } from '@angular/forms';
+import { DisplayTestDataComponent } from './display-test-data/display-test-data.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     AboutComponent,
     FooterComponent,
     NavbarComponent,
-    FirstFormComponent
+    FirstFormComponent,
+    DisplayTestDataComponent
   ],
   imports: [
     BrowserModule,

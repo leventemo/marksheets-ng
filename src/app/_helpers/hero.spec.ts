@@ -1,3 +1,4 @@
+import { stringify } from 'querystring';
 import { Hero } from './hero';
 
 describe('Hero', () => {
