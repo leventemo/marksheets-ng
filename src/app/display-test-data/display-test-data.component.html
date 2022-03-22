@@ -1,1 +1,22 @@
-<p>display-test-data works!</p>
+<h2>You submitted the following:</h2>
+<table>
+  <tbody>
+    <tr>
+      <th scope="row" class="label">Name:</th>
+      <td>{{ testData.name }}</td>
+    </tr>
+    <tr>
+      <th scope="row" class="label">Group: </th>
+      <td>{{ testData.group }}</td>
+    </tr>
+    <tr>
+      <th scope="row" class="label">Test: </th>
+      <td> {{ testData.test }}</td>
+    </tr>
+    <tr>
+      <th scope="row" class="label">Date: </th>
+      <td>{{ testData.date | date: 'y MMM d' }}</td>
+    </tr>
+  </tbody>
+</table>
+<button class="btn btn-primary" (click)="submitted=false">Edit</button>

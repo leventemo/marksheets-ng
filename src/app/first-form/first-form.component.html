@@ -42,11 +42,14 @@
     </form>
   </div>
 
+  <!--
   <div [hidden]="!submitted">
     <h2>You submitted the following:</h2>
     <table>
       <tbody>
-        <!--legenerálni ngFor; [name group, test, date]-->
+      -->
+  <!--legenerálni ngFor; [name group, test, date]-->
+  <!--
         <tr>
           <th scope="row" class="label">Name:</th>
           <td>{{ heroForm.value.name }}</td>
@@ -67,6 +70,7 @@
     </table>
     <button class="btn btn-primary" (click)="submitted=false">Edit</button>
   </div>
+-->
 
   <div *ngFor="let item of currentTestStructure.testStructure">{{makeString(item)}}</div>
 

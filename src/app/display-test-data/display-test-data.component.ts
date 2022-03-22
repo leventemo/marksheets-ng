@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplayTestDataComponent implements OnInit {
 
-  constructor() { }
+  testData = {};
 
-  ngOnInit(): void {
+  constructor() {
+
+  }
+
+  ngOnInit(): {} {
+    const testString: any = localStorage.getItem('testData');
+
+    this.testData = JSON.parse(testString);
+
+    console.log(this.testData);
+
+    return this.testData;
   }
 
 }
