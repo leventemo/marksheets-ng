@@ -11,20 +11,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./first-form.component.css']
 })
 export class FirstFormComponent {
-  currentTestStructure: TestPaper = { testName: '', totalScore: null, testStructure: [] };
   objectKeys = Object.keys;
   languageTestModel = LanguageTestModel;
-
-  makeString = JSON.stringify;
-
   model = new Hero(0, '', '', new Date(), null);
 
   submitted = false;
 
   onSubmit() {
     this.submitted = true;
-
-    this.currentTestStructure = this.languageTestModel[this.model.test || ''];
 
     const jsonData = JSON.stringify(this.model);
     localStorage.setItem('testData', jsonData);
@@ -38,26 +32,5 @@ export class FirstFormComponent {
   }
 
   constructor(private router: Router) { }
-
-  /*   newHero() {
-      this.model = new Hero(0, '', '', new Date(), null);
-    }
-
-    skyDog(): Hero {
-      this.model = new Hero(0, '', '', new Date(), null);
-      return this.model;
-    } */
-
-  //////// NOT SHOWN IN DOCS ////////
-
-  // Reveal in html:
-  //   Name via form.controls = {{showFormControls(heroForm)}}
-  /*   showFormControls(form: any) {
-      return form && form.controls.name &&
-        form.controls.name.value; // Dr. IQ
-    } */
-
-  /////////////////////////////
-
 
 }

@@ -19,4 +19,13 @@
     </tr>
   </tbody>
 </table>
-<button class="btn btn-primary" (click)="submitted=false">Edit</button>
+
+<div *ngFor="let item of currentTestStructure.testStructure">
+
+  {{item.partNumber}}{{item.taskType}}
+  {{consolePrivate(item)}}
+
+  <div *ngFor="let question of item.questions">
+    {{question['questionNumber']}}
+  </div>
+</div>

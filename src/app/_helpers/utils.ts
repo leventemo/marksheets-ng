@@ -1,3 +1,5 @@
+import { Question } from './templates'
+
 export class Utils {
   /*   static toggleClass(classToToggle, elements) {
       elements.forEach(item => {
@@ -27,7 +29,7 @@ export class Utils {
       return res;
     } */
 
-  static generateQnsArray(firstQnNo: number, lastQnNo: number, value: number): Array<object> {
+  static generateQnsArray(firstQnNo: number, lastQnNo: number, value: number): Array<Question> {
     const questions = [];
     const diff = lastQnNo - firstQnNo;
 

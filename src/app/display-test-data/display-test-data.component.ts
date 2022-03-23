@@ -1,4 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { LanguageTestModel, TestPaper } from '../_helpers/templates';
+
+interface TestData {
+  id: number,
+  name: string,
+  group: string,
+  date: Date,
+  test: string
+}
 
 @Component({
   selector: 'app-display-test-data',
@@ -7,20 +16,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplayTestDataComponent implements OnInit {
 
-  testData = {};
+  testData: TestData;
+  languageTestModel = LanguageTestModel;
+  currentTestStructure: TestPaper;
+  makeString = JSON.stringify;
+  consolePrivate = console.log;
 
   constructor() {
 
-  }
-
-  ngOnInit(): {} {
     const testString: any = localStorage.getItem('testData');
 
     this.testData = JSON.parse(testString);
 
-    console.log(this.testData);
+    console.log(this.testData)
 
-    return this.testData;
+    this.currentTestStructure = this.languageTestModel[this.testData.test];
+  }
+
+  ngOnInit(): any {
+
   }
 
 }

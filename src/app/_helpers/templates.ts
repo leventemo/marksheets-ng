@@ -1,12 +1,18 @@
 import { Utils } from './utils';
 
+export interface Question {
+  questionNumber: number,
+  value: number,
+  score: number | null
+}
+
 class TestStructureItem {
   public partNumber: number;
   public taskType: string;
   public partScore: null | number;
-  public questions: Array<object>;
+  public questions: Array<Question>;
 
-  constructor(partNumber: number, taskType: string, questions: Array<object>) {
+  constructor(partNumber: number, taskType: string, questions: Array<Question>) {
     this.partNumber = partNumber;
     this.taskType = taskType;
     this.partScore = null;
