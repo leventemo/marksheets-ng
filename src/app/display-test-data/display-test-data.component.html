@@ -27,5 +27,9 @@
 
   <div *ngFor="let question of item.questions">
     {{question['questionNumber']}}
+    <!--1pontos: 0 - 1 nullZero-->
+    <!--2pontos: 0 - 1 - 2 nullOneTwo-->
+    <!--2pontos: 0 - 2 nullTwo-->
+    <button>{{question['value']}}</button>
   </div>
 </div>

@@ -6,6 +6,7 @@ export interface Question {
   score: number | null
 }
 
+// TODO: refactor generateQnsArray() + zeroOne, zeroOneTwo, zeroTwo
 class TestStructureItem {
   public partNumber: number;
   public taskType: string;
