@@ -12,12 +12,18 @@ class TestStructureItem {
   public taskType: string;
   public partScore: null | number;
   public questions: Array<Question>;
+  public firstQnNo: number;
+  public lastQnNo: number;
+  public value: number;
 
-  constructor(partNumber: number, taskType: string, questions: Array<Question>) {
+  constructor(partNumber: number, taskType: string, firstQnNo: number, lastQnNo: number, value: number) {
     this.partNumber = partNumber;
     this.taskType = taskType;
     this.partScore = null;
-    this.questions = questions;
+    this.questions = Utils.generateQnsArray(firstQnNo, lastQnNo, value);
+    this.firstQnNo = firstQnNo;
+    this.lastQnNo = lastQnNo;
+    this.value = value;
   }
 }
 
@@ -32,12 +38,12 @@ const b1Reading = {
   testName: 'B1 Preliminary – Reading',
   totalScore: null,
   testStructure: [
-    new TestStructureItem(1, 'Three-option multiple choice', Utils.generateQnsArray(1, 5, 1)),
-    new TestStructureItem(2, 'Matching', Utils.generateQnsArray(6, 10, 1)),
-    new TestStructureItem(3, 'Four-option multiple choice', Utils.generateQnsArray(11, 15, 1)),
-    new TestStructureItem(4, 'Gapped text', Utils.generateQnsArray(16, 20, 1)),
-    new TestStructureItem(5, 'Four-option multiple-choice cloze', Utils.generateQnsArray(21, 26, 1)),
-    new TestStructureItem(6, 'Open cloze', Utils.generateQnsArray(27, 32, 1)),
+    new TestStructureItem(1, 'Three-option multiple choice', 1, 5, 1),
+    new TestStructureItem(2, 'Matching', 6, 10, 1),
+    new TestStructureItem(3, 'Four-option multiple choice', 11, 15, 1),
+    new TestStructureItem(4, 'Gapped text', 16, 20, 1),
+    new TestStructureItem(5, 'Four-option multiple-choice cloze', 21, 26, 1),
+    new TestStructureItem(6, 'Open cloze', 27, 32, 1),
   ]
 }
 
@@ -45,10 +51,10 @@ const b1Listening = {
   testName: 'B1 Preliminary – Listening',
   totalScore: null,
   testStructure: [
-    new TestStructureItem(1, 'Three-option multiple choice', Utils.generateQnsArray(1, 7, 1)),
-    new TestStructureItem(2, 'Three-option multiple choice', Utils.generateQnsArray(8, 13, 1)),
-    new TestStructureItem(3, 'Gap fill', Utils.generateQnsArray(14, 19, 1)),
-    new TestStructureItem(4, 'Three-option multiple choice', Utils.generateQnsArray(20, 25, 1)),
+    new TestStructureItem(1, 'Three-option multiple choice', 1, 7, 1),
+    new TestStructureItem(2, 'Three-option multiple choice', 8, 13, 1),
+    new TestStructureItem(3, 'Gap fill', 14, 19, 1),
+    new TestStructureItem(4, 'Three-option multiple choice', 20, 25, 1),
   ]
 };
 
@@ -57,13 +63,13 @@ const b2ReadingAndUse = {
   testName: 'B2 First – Reading and Use of English',
   totalScore: null,
   testStructure: [
-    new TestStructureItem(1, 'Multiple-choice cloze', Utils.generateQnsArray(1, 8, 1)),
-    new TestStructureItem(2, 'Open cloze', Utils.generateQnsArray(9, 16, 1)),
-    new TestStructureItem(3, 'Word formation', Utils.generateQnsArray(17, 24, 1)),
-    new TestStructureItem(4, 'Key word transformation', Utils.generateQnsArray(25, 30, 2)),
-    new TestStructureItem(5, 'Multiple choice', Utils.generateQnsArray(31, 36, 2)),
-    new TestStructureItem(6, 'Gapped text', Utils.generateQnsArray(37, 42, 2)),
-    new TestStructureItem(7, 'Multiple matching', Utils.generateQnsArray(43, 52, 1)),
+    new TestStructureItem(1, 'Multiple-choice cloze', 1, 8, 1),
+    new TestStructureItem(2, 'Open cloze', 9, 16, 1),
+    new TestStructureItem(3, 'Word formation', 17, 24, 1),
+    new TestStructureItem(4, 'Key word transformation', 25, 30, 2),
+    new TestStructureItem(5, 'Multiple choice', 31, 36, 2),
+    new TestStructureItem(6, 'Gapped text', 37, 42, 2),
+    new TestStructureItem(7, 'Multiple matching', 43, 52, 1),
   ]
 }
 
@@ -71,10 +77,10 @@ const b2Listening = {
   testName: 'B2 First – Listening',
   totalScore: null,
   testStructure: [
-    new TestStructureItem(1, 'Multiple choice', Utils.generateQnsArray(1, 8, 1)),
-    new TestStructureItem(2, 'Sentence completion', Utils.generateQnsArray(9, 18, 1)),
-    new TestStructureItem(3, 'Multiple matching', Utils.generateQnsArray(19, 23, 1)),
-    new TestStructureItem(4, 'Multiple choice', Utils.generateQnsArray(24, 30, 1)),
+    new TestStructureItem(1, 'Multiple choice', 1, 8, 1),
+    new TestStructureItem(2, 'Sentence completion', 9, 18, 1),
+    new TestStructureItem(3, 'Multiple matching', 19, 23, 1),
+    new TestStructureItem(4, 'Multiple choice', 24, 30, 1),
   ]
 }
 
@@ -83,14 +89,14 @@ const c1ReadingAndUse = {
   testName: 'C1 Advanced – Reading and Use of English',
   totalScore: null,
   testStructure: [
-    new TestStructureItem(1, 'Multiple-choice cloze', Utils.generateQnsArray(1, 8, 1)),
-    new TestStructureItem(2, 'Open cloze', Utils.generateQnsArray(9, 16, 1)),
-    new TestStructureItem(3, 'Word formation', Utils.generateQnsArray(17, 24, 1)),
-    new TestStructureItem(4, 'Key word transformation', Utils.generateQnsArray(25, 30, 2)),
-    new TestStructureItem(5, 'Multiple choice', Utils.generateQnsArray(31, 36, 2)),
-    new TestStructureItem(6, 'Cross-text multiple matching', Utils.generateQnsArray(37, 40, 2)),
-    new TestStructureItem(7, 'Gapped text', Utils.generateQnsArray(41, 46, 2)),
-    new TestStructureItem(8, 'Multiple matching', Utils.generateQnsArray(47, 56, 1)),
+    new TestStructureItem(1, 'Multiple-choice cloze', 1, 8, 1),
+    new TestStructureItem(2, 'Open cloze', 9, 16, 1),
+    new TestStructureItem(3, 'Word formation', 17, 24, 1),
+    new TestStructureItem(4, 'Key word transformation', 25, 30, 2),
+    new TestStructureItem(5, 'Multiple choice', 31, 36, 2),
+    new TestStructureItem(6, 'Cross-text multiple matching', 37, 40, 2),
+    new TestStructureItem(7, 'Gapped text', 41, 46, 2),
+    new TestStructureItem(8, 'Multiple matching', 47, 56, 1),
   ]
 }
 
@@ -98,10 +104,10 @@ const c1Listening = {
   testName: 'C1 Advanced – Listening',
   totalScore: null,
   testStructure: [
-    new TestStructureItem(1, 'Multiple choice', Utils.generateQnsArray(1, 6, 1)),
-    new TestStructureItem(2, 'Sentence completion', Utils.generateQnsArray(7, 14, 1)),
-    new TestStructureItem(3, 'Multiple choice', Utils.generateQnsArray(15, 20, 1)),
-    new TestStructureItem(4, 'Multiple matching', Utils.generateQnsArray(21, 30, 1)),
+    new TestStructureItem(1, 'Multiple choice', 1, 6, 1),
+    new TestStructureItem(2, 'Sentence completion', 7, 14, 1),
+    new TestStructureItem(3, 'Multiple choice', 15, 20, 1),
+    new TestStructureItem(4, 'Multiple matching', 21, 30, 1),
   ]
 }
 
@@ -110,13 +116,13 @@ const c2ReadingAndUse = {
   testName: 'C2 Proficiency – Reading and Use of English',
   totalScore: null,
   testStructure: [
-    new TestStructureItem(1, 'Multiple-choice cloze', Utils.generateQnsArray(1, 8, 1)),
-    new TestStructureItem(2, 'Open cloze', Utils.generateQnsArray(9, 16, 1)),
-    new TestStructureItem(3, 'Word formation', Utils.generateQnsArray(17, 24, 1)),
-    new TestStructureItem(4, 'Key word transformation', Utils.generateQnsArray(25, 30, 2)),
-    new TestStructureItem(5, 'Multiple choice', Utils.generateQnsArray(31, 36, 2)),
-    new TestStructureItem(6, 'Gapped text', Utils.generateQnsArray(37, 43, 2)),
-    new TestStructureItem(7, 'Multiple matching', Utils.generateQnsArray(44, 53, 1)),
+    new TestStructureItem(1, 'Multiple-choice cloze', 1, 8, 1),
+    new TestStructureItem(2, 'Open cloze', 9, 16, 1),
+    new TestStructureItem(3, 'Word formation', 17, 24, 1),
+    new TestStructureItem(4, 'Key word transformation', 25, 30, 2),
+    new TestStructureItem(5, 'Multiple choice', 31, 36, 2),
+    new TestStructureItem(6, 'Gapped text', 37, 43, 2),
+    new TestStructureItem(7, 'Multiple matching', 44, 53, 1),
   ]
 }
 
@@ -124,10 +130,10 @@ const c2Listening = {
   testName: 'C2 Proficiency – Listening',
   totalScore: null,
   testStructure: [
-    new TestStructureItem(1, 'Three-option multiple choice', Utils.generateQnsArray(1, 6, 1)),
-    new TestStructureItem(2, 'Sentence completion', Utils.generateQnsArray(7, 15, 1)),
-    new TestStructureItem(3, 'Four-option multiple choice', Utils.generateQnsArray(16, 20, 1)),
-    new TestStructureItem(4, 'Multiple matching', Utils.generateQnsArray(21, 30, 1)),
+    new TestStructureItem(1, 'Three-option multiple choice', 1, 6, 1),
+    new TestStructureItem(2, 'Sentence completion', 7, 15, 1),
+    new TestStructureItem(3, 'Four-option multiple choice', 16, 20, 1),
+    new TestStructureItem(4, 'Multiple matching', 21, 30, 1),
   ]
 }
 

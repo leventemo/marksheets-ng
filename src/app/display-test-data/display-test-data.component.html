@@ -1,4 +1,5 @@
 <h2>You submitted the following:</h2>
+
 <table>
   <tbody>
     <tr>
@@ -17,19 +18,26 @@
       <th scope="row" class="label">Date: </th>
       <td>{{ testData.date | date: 'y MMM d' }}</td>
     </tr>
+    <tr>
+      <th scope="row" class="label">Total Score: </th>
+      <td>{{ calcScore()}}
+      </td>
+    </tr>
   </tbody>
 </table>
 
 <div *ngFor="let item of currentTestStructure.testStructure">
 
   {{item.partNumber}}{{item.taskType}}
-  {{consolePrivate(item)}}
+  <!-- {{consolePrivate(item)}} -->
 
   <div *ngFor="let question of item.questions">
     {{question['questionNumber']}}
     <!--1pontos: 0 - 1 nullZero-->
     <!--2pontos: 0 - 1 - 2 nullOneTwo-->
     <!--2pontos: 0 - 2 nullTwo-->
-    <button>{{question['value']}}</button>
+    <button class="btn btn-secondary" (click)="clickBtn(question['questionNumber'], 0)">0</button>
+    <button class="btn btn-secondary" (click)="clickBtn(question['questionNumber'], 1)">1</button>
+    <button class="btn btn-secondary" (click)="clickBtn(question['questionNumber'], 2)">2</button>
   </div>
 </div>

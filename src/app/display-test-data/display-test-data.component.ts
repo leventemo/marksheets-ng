@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { LanguageTestModel, TestPaper } from '../_helpers/templates';
 
 interface TestData {
@@ -14,13 +14,15 @@ interface TestData {
   templateUrl: './display-test-data.component.html',
   styleUrls: ['./display-test-data.component.css']
 })
-export class DisplayTestDataComponent implements OnInit {
+export class DisplayTestDataComponent {
 
   testData: TestData;
   languageTestModel = LanguageTestModel;
   currentTestStructure: TestPaper;
   makeString = JSON.stringify;
   consolePrivate = console.log;
+
+  resultArray: number[] = [];
 
   constructor() {
 
@@ -33,8 +35,19 @@ export class DisplayTestDataComponent implements OnInit {
     this.currentTestStructure = this.languageTestModel[this.testData.test];
   }
 
-  ngOnInit(): any {
+  clickBtn(qnNumber: number, value: number) {
+
+    this.resultArray[qnNumber - 1] = value;
+
+    console.log(this.resultArray);
 
   }
 
+  calcScore() {
+    return this.resultArray.reduce((previousValue, currentValue) => previousValue + currentValue, 0)
+  }
+
+  // TODO: getClass()
+
+  // TODO: calPartValue: slice/splice-sszal
 }
